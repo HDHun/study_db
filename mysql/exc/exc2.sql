@@ -197,3 +197,44 @@ select *from cafe where cafename like '%라로%';
 select *from cafe where cafename like '%라로';
 select *from cafe where cafename like '라로%';
 
+
+-- unique, primary key, foreign key : 유일한 데이터
+-- pk : primary key :중복되는 데이터는 불허
+-- nn : not null : null값을 허용하지 않는다.( 데이터가 무조건 들어와야 한다.)
+-- uq : unique : 중복되는 데이터는 불허
+-- b : 바이너리 파일 저장
+-- un : unsigned : 양수만 
+-- tinyint = -128 ~ 0 ~ 127에 un 적용 : 0 ~ 255
+-- zf : zerofill
+-- ai : auto increament : 자동증가
+-- g : auto increament의 다른 형태
+
+
+-- DDL : db, table : 주로 관리자 ,선임들의 업무 alter
+-- DML : data : 후임들
+-- DCL : 접근 권한, 커밋/롤백
+
+-- 컬럼 추가
+alter table table1 add tel varchar(50);
+desc table1;
+-- 컬럼 삭제
+alter table table1 drop tel;
+-- 컬럼 타입 변경
+alter table table1 modify tel int;
+-- 컬럼 이름 변경
+ alter table table1 change tel tele int;
+ 
+-- 데이터 수정
+update table1 set
+	name ='HDH'
+where 1=1
+	and seq = 3;
+
+-- 데이터 삭제
+delete from table1
+where 1=1
+	seq=3;
+    
+-- 전체 데이터 삭제
+truncate table1;
+ 
