@@ -33,3 +33,4 @@ insert into book (
     ,19000
     );
     
+    drop table book;
