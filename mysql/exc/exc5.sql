@@ -1,19 +1,19 @@
-use sakila;
+use world;
 
 
 insert into book2 (
 name
 ,publisher_cd
 ) values (
-'성심당'
-,1
+'ㄷㄷㄷ'
+,4
 );
 
 
 insert into publisher (
 name
 ) values (
-'출판사'
+'ㅋㅋㅋ'
 );
 
 select*from book2;
@@ -25,7 +25,7 @@ select
 	,a.publisher_cd
 	,b.name
 from book2 as a
-left join publisher as b on b.seq = a.publisher_cd;
+inner join publisher as b on b.seq = a.publisher_cd;
 
 select
 	a.seq
