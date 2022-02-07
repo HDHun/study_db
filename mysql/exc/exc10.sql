@@ -59,8 +59,8 @@ codeseq
 ,name
 ,codeGroup_codegroupseq
 ) values (
-4
-,'요가'
+8
+,''
 ,9
 );
 
@@ -92,24 +92,24 @@ seq
 ,passwordQuestionCd
 ,hobbyCd
 ) values (
-5
-,'bee'
-,'벌'
-,'bee2112'
-,'2014-06-12'
+7
+,'pepsi'
+,'콜라'
+,'pep24949'
+,'2015-4-21'
+,1
+,'02-555-5555'
+,1
+,1
 ,2
-,'02-484-1042'
-,1
-,1
-,1
-,9
-,'수학과'
-,5
-,'011200'
-,'worker'
+,0
+,'집'
 ,3
-,1
-,1
+,'300ss2'
+,'student'
+,2
+,3
+,3
 );
 
 
@@ -132,7 +132,12 @@ select *
 from infrMember a
 left join mobile b on b.mobileseq = a.seq;
 
-select *
+select 
+a.id
+,a.name
+,a.birth
+,a.genderCd
+,(select name from code where codeGroup_codegroupseq = 1 and codeseq = a.genderCd) as gendername
 from infrMember a
 left join recommender b on b.recommenderseq = a.seq;
 
@@ -152,5 +157,8 @@ emailseq
 ,defaultNy
 ,infrMember_seq
 ) values (
-
+3
+,'please@naver.com'
+,1
+,2
 );
