@@ -81,6 +81,6 @@ left join infrmemberphone h on h.ifmpDelNy = 0 and ifmpDefaultNy = 1 and h.ifmms
 	-- ifnull(c.ifaoSnsTypeCd,"-") as ifaoSnsTypeCdNullCheck : Null값에 '-'
 
 select*from infrmemberphone;
-select*from infrcodeGroup;
+select*from infrauthmenu;
 select*from infrcode;
 select*from infrnationality;
