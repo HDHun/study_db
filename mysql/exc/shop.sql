@@ -1,1 +1,3 @@
-SELECT * FROM shop.infrcategory;
+use shop;
+
+
